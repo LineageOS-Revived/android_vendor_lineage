@@ -26,7 +26,8 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     crDroidThemesStub \
-    ThemePicker
+    ThemePicker \
+    StitchImage
 
 # Fonts
 PRODUCT_PACKAGES += \
