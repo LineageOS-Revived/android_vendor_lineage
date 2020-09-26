@@ -22,3 +22,97 @@ PRODUCT_PACKAGES += \
   overlay-204-networkstack-Google \
   overlay-204-networkstack-openSUSE \
   overlay-204-networkstack-Ubuntu
+
+# Extra packages
+PRODUCT_PACKAGES += \
+    crDroidThemesStub \
+    ThemePicker
+
+# Fonts
+PRODUCT_PACKAGES += \
+    fonts_customization.xml \
+    AccuratistFont \
+    AclonicaFont \
+    Amarante \
+    BariolFont \
+    CagliostroFont \
+    CoconFont \
+    ComfortaaFont \
+    ComicSansFont \
+    CoolstoryFont \
+    ExotwoFont \
+    Fifa2018Font \
+    GoogleSansFont \
+    GrandHotelFont \
+    LatoFont \
+    LGSmartGothicFont \
+    LinotteFont \
+    NokiaPureFont \
+    NunitoFont \
+    OneplusSlateFont \
+    OswaldFont \
+    QuandoFont \
+    RedressedFont \
+    ReemKufiFont \
+    RobotoCondensedFont \
+    RosemaryFont \
+    RubikFont \
+    SamsungOneFont \
+    SonySketchFont \
+    StoropiaFont \
+    SurferFont \
+    UbuntuFont
+
+# Accents
+PRODUCT_PACKAGES += \
+    Amber \
+    Black \
+    Blue \
+    BlueGrey \
+    Brown \
+    Cyan \
+    DeepOrange \
+    DeepPurple \
+    Green \
+    Grey \
+    Indigo \
+    LightBlue \
+    LightGreen \
+    Lime \
+    Orange \
+    Pink \
+    Purple \
+    Red \
+    Teal \
+    UserOne \
+    UserTwo \
+    UserThree \
+    UserFour \
+    UserFive \
+    UserSix \
+    UserSeven \
+    Yellow \
+    White
+
+# Brand Accents
+PRODUCT_PACKAGES += \
+    AospaGreen \
+    AndroidOneGreen \
+    CocaColaRed \
+    DiscordPurple \
+    FacebookBlue \
+    InstagramCerise \
+    JollibeeCrimson \
+    MonsterEnergyGreen \
+    NextbitMint \
+    OneplusRed \
+    PepsiBlue \
+    PocophoneYellow \
+    RazerGreen \
+    SamsungBlue \
+    SpotifyGreen \
+    StarbucksGreen \
+    TwitchPurple \
+    TwitterBlue \
+    XboxGreen \
+    XiaomiOrange

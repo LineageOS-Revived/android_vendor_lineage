@@ -2,6 +2,7 @@
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 # Lineage Rev specific packages/props
 $(call inherit-product, vendor/lineage/config/lineage.mk)
+$(call inherit-product-if-exists, vendor/addons/config.mk)
 
 PRODUCT_BRAND ?= LineageOS
 
@@ -117,11 +118,6 @@ PRODUCT_PACKAGES += \
     LineageSettingsProvider \
     LineageSetupWizard \
     Updater
-
-# Themes
-PRODUCT_PACKAGES += \
-    LineageThemesStub \
-    ThemePicker
 
 # Config
 PRODUCT_PACKAGES += \
