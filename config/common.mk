@@ -89,6 +89,10 @@ ifeq ($(WITH_TWRP),true)
 include vendor/lineage/config/twrp.mk
 endif
 
+# Disable RescueParty due to high risk of data loss
+PRODUCT_PRODUCT_PROPERTIES += \
+        persist.sys.disable_rescue=true
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
