@@ -16,17 +16,12 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhotoTable
 
-# AOSP packages
-PRODUCT_PACKAGES += \
-    Email \
-    ExactCalculator \
-    Exchange2
-
-# Lineage packages
+# Apps
 PRODUCT_PACKAGES += \
     Backgrounds \
     Eleven \
     Etar \
+    ExactCalculator \
     Jelly \
     LockClock \
     Profiles \
