@@ -235,6 +235,7 @@ endif
 # Media
 PRODUCT_PACKAGES += \
     Glimpse_prebuilt \
+    MuPDF \
     Twelve_prebuilt
 
 # Disable iorapd
