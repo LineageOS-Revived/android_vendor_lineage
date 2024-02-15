@@ -33,3 +33,20 @@ android_app_import {
     apk: "Aperture20240214.apk",
     presigned: true,
 }
+
+android_app_import {
+    name: "Glimpse",
+    product_specific: true,
+    // Make sure the build system doesn't try to resign the APK
+    dex_preopt: {
+        enabled: false,
+    },
+    overrides: [
+        "Gallery",
+        "Gallery2",
+        "Gallery3D",
+        "GalleryNew3D",
+    ],
+    apk: "Glimpse20240214.apk",
+    presigned: true,
+}
