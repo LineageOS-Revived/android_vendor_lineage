@@ -1,3 +1,6 @@
+# Unofficial patch level
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.lineage.custom_version=2024-11-01
+
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
