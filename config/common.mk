@@ -181,6 +181,13 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# Camera
+ifneq ($(TARGET_APERTURE_OPTOUT),true)
+PRODUCT_PACKAGES += \
+    Aperture \
+    Glimpse
+endif
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
