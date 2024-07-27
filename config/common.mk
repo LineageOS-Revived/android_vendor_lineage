@@ -91,10 +91,6 @@ ifeq ($(WITH_TWRP),true)
 include vendor/lineage/config/twrp.mk
 endif
 
-# Disable RescueParty due to high risk of data loss
-PRODUCT_PRODUCT_PROPERTIES += \
-        persist.sys.disable_rescue=true
-
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
@@ -184,13 +180,6 @@ ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     su
 endif
-endif
-
-# Camera
-ifneq ($(TARGET_APERTURE_OPTOUT),true)
-PRODUCT_PACKAGES += \
-    Aperture \
-    Glimpse
 endif
 
 # Dex preopt
