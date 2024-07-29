@@ -45,10 +45,12 @@ PRODUCT_PACKAGES += \
     Fifa2018Font \
     GoogleSansFont \
     GrandHotelFont \
+    HarmonyFont \
     LatoFont \
     LGSmartGothicFont \
     LinotteFont \
     NokiaPureFont \
+    NothingDot57 \
     NunitoFont \
     OneplusSansFont \
     OneplusSlateFont \
