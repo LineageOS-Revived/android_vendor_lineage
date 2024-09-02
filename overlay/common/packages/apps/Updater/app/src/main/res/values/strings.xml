@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--
+        Optional placeholders replaced at runtime:
+          {device} - Device name
+          {type} - Build type
+          {incr} - Incremental version
+    -->
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/LineageOS-Revived/ota_config/lineage-18.1/$(LINEAGE_BUILD).json</string>
+</resources>
