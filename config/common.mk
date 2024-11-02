@@ -243,4 +243,5 @@ include vendor/lineage/config/version.mk
 # Media
 PRODUCT_PACKAGES += \
     Glimpse_prebuilt \
-    MuPDF
+    MuPDF \
+    Twelve_prebuilt
