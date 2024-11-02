@@ -232,8 +232,10 @@ PRODUCT_PACKAGES += \
     Aperture_prebuilt \
 endif
 
+# Media
 PRODUCT_PACKAGES += \
-    Glimpse_prebuilt
+    Glimpse_prebuilt \
+    Twelve_prebuilt
 
 # Disable iorapd
 PRODUCT_SYSTEM_PROPERTIES += \
