@@ -9,6 +9,10 @@ PRODUCT_PACKAGES += \
     Glimpse_prebuilt
 endif
 
+# Music
+PRODUCT_PACKAGES += \
+    Twelve_prebuilt
+
 #Captive-Portal detection overlays
 #(default: GrapheneOS - see vendor/lineage/overlay)
 PRODUCT_PACKAGES += \

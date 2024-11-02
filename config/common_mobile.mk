@@ -15,7 +15,6 @@ PRODUCT_PACKAGES += \
 # Lineage packages
 PRODUCT_PACKAGES += \
     Backgrounds \
-    Eleven \
     Etar \
     Jelly \
     Profiles \
