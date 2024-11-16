@@ -5,8 +5,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Camera
 ifneq ($(TARGET_APERTURE_OPTOUT),true)
 PRODUCT_PACKAGES += \
-    Aperture \
-    Glimpse
+    Aperture_prebuilt \
+    Glimpse_prebuilt
 endif
 
 #Captive-Portal detection overlays
