@@ -229,9 +229,11 @@ include vendor/lineage/config/version.mk
 # Camera
 ifneq ($(TARGET_APERTURE_OPTOUT),true)
 PRODUCT_PACKAGES += \
-    Aperture \
-    Glimpse
+    Aperture_prebuilt \
 endif
+
+PRODUCT_PACKAGES += \
+    Glimpse_prebuilt
 
 # Disable iorapd
 PRODUCT_SYSTEM_PROPERTIES += \
