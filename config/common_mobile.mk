@@ -24,7 +24,6 @@ PRODUCT_PACKAGES += \
 
 # Lineage packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     Backgrounds \
     Eleven \
     Etar \
@@ -34,6 +33,11 @@ PRODUCT_PACKAGES += \
     Seedvault \
     TrebuchetQuickStep \
     WeatherProvider
+
+ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
+PRODUCT_PACKAGES += \
+    AudioFX
+endif
 
 # Accents
 PRODUCT_PACKAGES += \
