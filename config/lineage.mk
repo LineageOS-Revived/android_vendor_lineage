@@ -16,12 +16,12 @@ PRODUCT_PACKAGES += \
 #Captive-Portal detection overlays
 #(default: GrapheneOS - see vendor/lineage/overlay)
 PRODUCT_PACKAGES += \
-  overlay-204-android-Google \
-  overlay-204-android-openSUSE \
-  overlay-204-android-Ubuntu \
-  overlay-204-networkstack-Google \
-  overlay-204-networkstack-openSUSE \
-  overlay-204-networkstack-Ubuntu
+    overlay-204-android-Google \
+    overlay-204-android-openSUSE \
+    overlay-204-android-Ubuntu \
+    overlay-204-networkstack-Google \
+    overlay-204-networkstack-openSUSE \
+    overlay-204-networkstack-Ubuntu
 
 # Extra packages
 PRODUCT_PACKAGES += \
@@ -127,19 +127,19 @@ PRODUCT_PACKAGES += \
 
 # Signal / WiFi Icons
 PRODUCT_PACKAGES += \
-	BarsSignalOverlay \
-	BarsWiFiOverlay \
-	InsideSignalOverlay \
-	InsideWiFiOverlay \
-	RoundSignalOverlay \
-	RoundWiFiOverlay \
-	SneakySignalOverlay \
-	SneakyWiFiOverlay \
-	StrokeSignalOverlay \
-	StrokeWiFiOverlay \
-	WavySignalOverlay \
-	WavyWiFiOverlay \
-	XperiaSignalOverlay \
-	XperiaWiFiOverlay \
-	ZigZagSignalOverlay \
-	ZigZagWiFiOverlay
+    BarsSignalOverlay \
+    BarsWiFiOverlay \
+    InsideSignalOverlay \
+    InsideWiFiOverlay \
+    RoundSignalOverlay \
+    RoundWiFiOverlay \
+    SneakySignalOverlay \
+    SneakyWiFiOverlay \
+    StrokeSignalOverlay \
+    StrokeWiFiOverlay \
+    WavySignalOverlay \
+    WavyWiFiOverlay \
+    XperiaSignalOverlay \
+    XperiaWiFiOverlay \
+    ZigZagSignalOverlay \
+    ZigZagWiFiOverlay
