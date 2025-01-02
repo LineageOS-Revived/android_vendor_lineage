@@ -223,7 +223,12 @@ def fetch_dependencies(repo_path):
                 fetch_list.append(dependency)
                 syncable_repos.append(dependency['target_path'])
                 if 'branch' not in dependency:
-                    dependency['branch'] = get_default_or_fallback_revision(dependency['repository'])
+                    if dependency.get('remote', 'github') == 'github':
+                        dependency['branch'] = get_default_or_fallback_revision(dependency['repository'])
+                        if not dependency['branch']:
+                            sys.exit(1)
+                    else:
+                        dependency['branch'] = None
             verify_repos.append(dependency['target_path'])
 
             if not os.path.isdir(dependency['target_path']):
