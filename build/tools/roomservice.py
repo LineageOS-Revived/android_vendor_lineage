@@ -274,7 +274,7 @@ def get_default_or_fallback_revision(repo_name):
 
     print("Default revision %s not found in %s. Bailing." % (default_revision, repo_name))
     print("Branches found:")
-    for branch in [branch['name'] for branch in result]:
+    for branch in branches:
         print(branch)
     print("Use the ROOMSERVICE_BRANCHES environment variable to specify a list of fallback branches.")
     return ""
