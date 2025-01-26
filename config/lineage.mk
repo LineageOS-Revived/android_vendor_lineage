@@ -16,7 +16,7 @@ endif
 PRODUCT_PACKAGES += \
     Twelve_prebuilt
 
-#Captive-Portal detection overlays
+# Captive-Portal detection overlays
 #(default: GrapheneOS - see vendor/lineage/overlay)
 PRODUCT_PACKAGES += \
     overlay-204-android-Google \
@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     crDroidThemesStub \
+    IconShapeSquareOverlay \
     ThemePicker \
     StitchImage
 
@@ -125,8 +126,7 @@ PRODUCT_PACKAGES += \
 
 # Dark Styles
 PRODUCT_PACKAGES += \
-    SystemAmoledBlack \
-    SystemCharcoalBlack
+    SystemAmoledBlack
 
 # Signal / WiFi Icons
 PRODUCT_PACKAGES += \
@@ -146,3 +146,8 @@ PRODUCT_PACKAGES += \
     XperiaWiFiOverlay \
     ZigZagSignalOverlay \
     ZigZagWiFiOverlay
+
+# NavBar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayHidden \
+    NavigationBarMode2ButtonOverlay

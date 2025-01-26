@@ -43,12 +43,6 @@ PRODUCT_PACKAGES += \
     lineage_charger_animation
 endif
 
-# Customizations
-PRODUCT_PACKAGES += \
-    IconShapeSquareOverlay \
-    LineageNavigationBarNoHint \
-    NavigationBarMode2ButtonOverlay
-
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
