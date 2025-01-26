@@ -117,7 +117,7 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    LineageThemesStub \
+    crDroidThemesStub \
     ThemePicker
 
 # Extra tools in Lineage
