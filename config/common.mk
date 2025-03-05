@@ -229,7 +229,7 @@ include vendor/lineage/config/version.mk
 # Camera
 ifneq ($(TARGET_APERTURE_OPTOUT),true)
 PRODUCT_PACKAGES += \
-    Aperture_prebuilt \
+    Aperture_prebuilt
 endif
 
 # Media
