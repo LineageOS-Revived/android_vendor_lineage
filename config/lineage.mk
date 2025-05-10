@@ -8,9 +8,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Camera
 ifneq ($(TARGET_APERTURE_OPTOUT),true)
 PRODUCT_PACKAGES += \
-    Aperture_prebuilt \
-    Glimpse_prebuilt
+    Aperture_prebuilt
 endif
+
+# Gallery
+PRODUCT_PACKAGES += \
+    Glimpse_prebuilt
 
 # Music
 PRODUCT_PACKAGES += \
