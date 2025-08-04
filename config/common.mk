@@ -205,7 +205,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 -include vendor/lineage/config/partner_gms.mk
 
 # QTI Perf
-ifeq ($(BOARD_USES_QCOM_HARDWARE),)
+ifeq ($(TARGET_QCOM_COMPONENTS),true)
 -include vendor/qcom/common/perf/perf-vendor.mk
 TARGET_COMMON_QTI_COMPONENTS := perf
 
