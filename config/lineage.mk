@@ -19,6 +19,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Twelve_prebuilt
 
+# PDF
+PRODUCT_PACKAGES += \
+    MuPDF
+
 # Captive-Portal detection overlays
 #(default: GrapheneOS - see vendor/lineage/overlay)
 PRODUCT_PACKAGES += \
