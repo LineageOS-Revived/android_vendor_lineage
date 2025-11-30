@@ -6,5 +6,5 @@
           {type} - Build type
           {incr} - Incremental version
     -->
-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/LineageOS-Revived/ota_config/lineage-18.1/$(LINEAGE_BUILD).json</string>
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/LineageOS-Revived/ota_config/lineage-18.1/{device}.json</string>
 </resources>
