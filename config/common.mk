@@ -31,13 +31,6 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
-# Adblock
-PRODUCT_PACKAGES += \
-    hosts.adblock
-
-PRODUCT_COPY_FILES += \
-    vendor/lineage/etc/init/init.adblock.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.adblock.rc
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -232,18 +225,3 @@ include vendor/lineage/config/version.mk
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
 
-# Camera
-ifneq ($(TARGET_APERTURE_OPTOUT),true)
-PRODUCT_PACKAGES += \
-    Aperture_prebuilt
-endif
-
-# Media
-PRODUCT_PACKAGES += \
-    Glimpse_prebuilt \
-    MuPDF \
-    Twelve_prebuilt
-
-# Disable iorapd
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.iorapd.enable=false
