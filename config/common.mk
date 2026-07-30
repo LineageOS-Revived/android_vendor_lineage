@@ -1,8 +1,6 @@
-# Unofficial patch level
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.lineage.custom_version=2026-03-01
-
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+$(call inherit-product-if-exists, vendor/lineage/config/lineage.mk)
 
 PRODUCT_BRAND ?= LineageOS
 
@@ -31,13 +29,6 @@ endif
 # Disable extra StrictMode features on all non-engineering builds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
-
-# Adblock
-PRODUCT_PACKAGES += \
-    hosts.adblock
-
-PRODUCT_COPY_FILES += \
-    vendor/lineage/etc/init/init.adblock.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.adblock.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -242,9 +233,3 @@ include vendor/lineage/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
-
-# Media
-PRODUCT_PACKAGES += \
-    Glimpse_prebuilt \
-    MuPDF \
-    Twelve_prebuilt
