@@ -391,7 +391,8 @@ define build-image-kernel-modules-lineage
         for MODULE in $(1); do \
             BASENAME=$$(basename $$MODULE); \
             echo lib/modules$(6)/"$$BASENAME" >> "$(7)"; \
-        done \
+        done; \
+        sort -u "$(7)" -o "$(7)"; \
     fi;
 endef
 
@@ -423,7 +424,11 @@ else
 KERNEL_MODULES_OUT := $(TARGET_OUT_VENDOR)
 KERNEL_DEPMOD_STAGING_DIR := $(KERNEL_BUILD_OUT_PREFIX)$(call intermediates-dir-for,PACKAGING,depmod_vendor)
 KERNEL_MODULE_MOUNTPOINT := vendor
+ifneq ($(BUILDING_VENDOR_IMAGE),)
 KERNEL_MODULES_PARTITION_FILE_LIST := $(vendorimage_intermediates)/file_list.txt
+else # No vendor partition
+KERNEL_MODULES_PARTITION_FILE_LIST := $(systemimage_intermediates)/file_list.txt
+endif # BUILDING_VENDOR_IMAGE
 $(INSTALLED_VENDORIMAGE_TARGET): $(TARGET_PREBUILT_INT_KERNEL)
 endif
 ifeq ($(BOARD_USES_SYSTEM_DLKMIMAGE),true)
@@ -543,7 +548,7 @@ $(TARGET_PREBUILT_INT_KERNEL): $(KERNEL_CONFIG) $(DEPMOD) $(DTC) $(KERNEL_MODULE
 kerneltags: $(KERNEL_CONFIG)
 	$(call make-kernel-target,tags)
 
-.PHONY: kernelsavedefconfig alldefconfig
+.PHONY: kernelsavedefconfig alldefconfig kernelconfig recoverykernelconfig
 
 kernelsavedefconfig: $(KERNEL_OUT)
 	$(call make-kernel-config,$(KERNEL_OUT),$(BASE_KERNEL_DEFCONFIG))
@@ -553,6 +558,14 @@ kernelsavedefconfig: $(KERNEL_OUT)
 alldefconfig: $(KERNEL_OUT)
 	env KCONFIG_NOTIMESTAMP=true \
 		 $(call make-kernel-target,alldefconfig)
+
+kernelconfig: $(KERNEL_OUT) $(ALL_KERNEL_DEFCONFIG_SRCS)
+	@echo "Building Kernel Config"
+	$(call make-kernel-config,$(KERNEL_OUT),$(KERNEL_DEFCONFIG))
+
+recoverykernelconfig: $(KERNEL_OUT) $(ALL_RECOVERY_KERNEL_DEFCONFIG_SRCS)
+	@echo "Building Recovery Kernel Config"
+	$(call make-kernel-config,$(RECOVERY_KERNEL_OUT),$(RECOVERY_DEFCONFIG))
 
 ifeq (true,$(filter true, $(TARGET_NEEDS_DTBOIMAGE) $(BOARD_KERNEL_SEPARATED_DTBO)))
 ifneq ($(BOARD_CUSTOM_DTBOIMG_MK),)

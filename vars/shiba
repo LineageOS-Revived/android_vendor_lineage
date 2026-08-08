@@ -5,25 +5,23 @@ device_repos=(
   # common repos in husky
 )
 
-readonly fbpk_version="v2"
-
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240705.005"
+readonly build_id="AP2A.240905.003"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly prev_aosp_tag="android-14.0.0_r50"
-readonly aosp_tag="android-14.0.0_r53"
+readonly prev_aosp_tag="android-14.0.0_r55"
+readonly aosp_tag="android-14.0.0_r67"
 
-readonly build_number="11942872"
+readonly build_number="12231197"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/shiba-ap2a.240705.005-factory-461aa7c8.zip"
-readonly image_sha256="461aa7c8a7834b429a73d50154ee194e7c22a2bdfa5fde417dc9c8b6c18dd91d"
+readonly image_url="https://dl.google.com/dl/android/aosp/shiba-ap2a.240905.003-factory-e3f78b31.zip"
+readonly image_sha256="e3f78b3156ad883bf1c540c125827fcdc0705474f2624f28e9ec6cdb0c6fd850"
 
-readonly flash_url="https://flash.android.com/build/11942872?target=shiba-user&signed"
+readonly flash_url="https://flash.android.com/build/12231197?target=shiba-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/shiba-ota-ap2a.240705.005-3376b945.zip"
-readonly ota_sha256="3376b945e3769c3b90b8a5715b66b5a12be7bbd68151b7b1c303079ce8f3e719"
+readonly ota_url="https://dl.google.com/dl/android/aosp/shiba-ota-ap2a.240905.003-fccccd6f.zip"
+readonly ota_sha256="fccccd6f7b62048c317fb6c48536afbbbb5b58940a4da64490c4e35ec4f8f747"
 
-readonly security_patch="2024-07-05"
+readonly security_patch="2024-09-05"
