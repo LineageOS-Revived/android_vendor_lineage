@@ -231,6 +231,39 @@ function dddclient()
    fi
 }
 
+function revremote()
+{
+    if ! git rev-parse --git-dir &> /dev/null
+    then
+        echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
+        return 1
+    fi
+    git remote rm rev 2> /dev/null
+    local REMOTE=$(git config --get remote.github.projectname)
+    local LINEAGE="true"
+    if [ -z "$REMOTE" ]
+    then
+        REMOTE=$(git config --get remote.aosp.projectname)
+        LINEAGE="false"
+    fi
+    if [ -z "$REMOTE" ]
+    then
+        REMOTE=$(git config --get remote.caf.projectname)
+        LINEAGE="false"
+    fi
+
+    if [ $LINEAGE = "false" ]
+    then
+        local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
+        local PFX="LineageOS-Revived/"
+    else
+        local PROJECT=$REMOTE
+    fi
+
+    git remote add rev git@github.com:$PFX$PROJECT
+    echo "Remote 'rev' created"
+}
+
 function lineageremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
