@@ -320,7 +320,7 @@ if depsonly:
     sys.exit()
 
 else:
-    for repo_name in repositories_rev:
+    for repo_name in repositories_rev + repositories_fallback:
         if re.match(r'^android_device_[^_]*_' + device + '$', repo_name):
             print(f'Found repository: {repo_name}')
 
